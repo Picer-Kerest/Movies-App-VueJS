@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import movies from './modules/movies';
 import loader from './modules/loader';
+import notification from "./modules/notification";
 
 Vue.use(Vuex)
 
@@ -13,10 +14,11 @@ const store = new Vuex.Store({
   modules: {
     movies,
     loader,
+    notification,
   }
 })
 
-store.dispatch('initMoviesStore');
+// store.dispatch('initMoviesStore');
 // Теперь у нас сразу же будет идти вызов initMoviesStore, а initMoviesStore будет вызывать fetchMovies
 
 export default store;
